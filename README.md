@@ -1,3 +1,3 @@
 # README
 
-JPeter sitting in a tree
+JPetey sitting in a tree
