@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <td><%= image_tag @user.avatar.url if @user.avatar? %></td>
+</p>
+<p>
   <strong>Username:</strong>
   <%= @user.username %>
 </p>

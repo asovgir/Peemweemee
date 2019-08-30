@@ -15,6 +15,9 @@
     <%= form.label :username %>
     <%= form.text_field :username, id: :user_username %>
   </div>
+  <div class="avatar">
+    <%= form.file_field :avatar %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
