@@ -23,6 +23,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to user_url(User.last)
   end
 
+  test "should not save user with no username" do
+    user = User.new
+    assert_not user.save, "saved user without a title"
+  end
+
   test "should show user" do
     get user_url(@user)
     assert_response :success
