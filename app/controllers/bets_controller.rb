@@ -15,6 +15,8 @@ class BetsController < ApplicationController
   # GET /bets/new
   def new
     @bet = Bet.new
+    @users = User.all
+    @categories = Category.all
   end
 
   # GET /bets/1/edit
