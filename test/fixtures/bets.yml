@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_complete: false
+  category: one
+  bet_name: MyString
+  bet_description: MyString
+  user: one
+  date_completed: 2019-08-31
+  betcoin_wager: 1
+  ticket_wager: MyString
+
+two:
+  is_complete: false
+  category: two
+  bet_name: MyString
+  bet_description: MyString
+  user: two
+  date_completed: 2019-08-31
+  betcoin_wager: 1
+  ticket_wager: MyString

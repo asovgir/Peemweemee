@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @bet.is_complete %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @bet.category %>
+</p>
+
+<p>
+  <strong>Bet name:</strong>
+  <%= @bet.bet_name %>
+</p>
+
+<p>
+  <strong>Bet description:</strong>
+  <%= @bet.bet_description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bet.user %>
+</p>
+
+<p>
+  <strong>Date completed:</strong>
+  <%= @bet.date_completed %>
+</p>
+
+<p>
+  <strong>Betcoin wager:</strong>
+  <%= @bet.betcoin_wager %>
+</p>
+
+<p>
+  <strong>Ticket wager:</strong>
+  <%= @bet.ticket_wager %>
+</p>
+
+<%= link_to 'Edit', edit_bet_path(@bet) %> |
+<%= link_to 'Back', bets_path %>

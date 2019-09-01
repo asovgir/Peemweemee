@@ -1,0 +1,57 @@
+<%= form_with(model: bet, local: true) do |form| %>
+  <% if bet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bet.errors.count, "error") %> prohibited this bet from being saved:</h2>
+
+      <ul>
+      <% bet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_complete %>
+    <%= form.check_box :is_complete, id: :bet_is_complete %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.text_field :category_id, id: :bet_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bet_name %>
+    <%= form.text_field :bet_name, id: :bet_bet_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bet_description %>
+    <%= form.text_field :bet_description, id: :bet_bet_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :bet_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_completed %>
+    <%= form.date_select :date_completed, id: :bet_date_completed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :betcoin_wager %>
+    <%= form.number_field :betcoin_wager, id: :bet_betcoin_wager %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_wager %>
+    <%= form.text_field :ticket_wager, id: :bet_ticket_wager %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
