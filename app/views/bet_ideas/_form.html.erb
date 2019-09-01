@@ -1,0 +1,22 @@
+<%= form_with(model: bet_idea, local: true) do |form| %>
+  <% if bet_idea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bet_idea.errors.count, "error") %> prohibited this bet_idea from being saved:</h2>
+
+      <ul>
+      <% bet_idea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idea %>
+    <%= form.text_field :idea, id: :bet_idea_idea %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

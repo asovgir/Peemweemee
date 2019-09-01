@@ -1,0 +1,30 @@
+<%= render 'shared/nav' %>
+<p id="notice"><%= notice %></p>
+
+<h1>Agendas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Is complete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agendas.each do |agenda| %>
+      <tr>
+        <td><%= agenda.topic %></td>
+        <td><%= agenda.is_complete %></td>
+        <td><%= link_to 'Show', agenda %></td>
+        <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
+        <td><%= link_to 'Destroy', agenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agenda', new_agenda_path %>

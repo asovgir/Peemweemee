@@ -1,0 +1,15 @@
+<%= render 'shared/nav' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @agenda.topic %>
+</p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @agenda.is_complete %>
+</p>
+
+<%= link_to 'Edit', edit_agenda_path(@agenda) %> |
+<%= link_to 'Back', agendas_path %>

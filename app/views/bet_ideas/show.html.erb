@@ -1,0 +1,10 @@
+<%= render 'shared/nav' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @bet_idea.idea %>
+</p>
+
+<%= link_to 'Edit', edit_bet_idea_path(@bet_idea) %> |
+<%= link_to 'Back', bet_ideas_path %>

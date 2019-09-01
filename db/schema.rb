@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190901025900) do
+ActiveRecord::Schema.define(version: 20190901035720) do
+
+  create_table "agendas", force: :cascade do |t|
+    t.string "topic"
+    t.boolean "is_complete"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bet_ideas", force: :cascade do |t|
+    t.string "idea"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bets", force: :cascade do |t|
     t.boolean "is_complete"

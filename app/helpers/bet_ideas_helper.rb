@@ -1,0 +1,2 @@
+module BetIdeasHelper
+end

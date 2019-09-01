@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bet_ideas
+  resources :agendas
   resources :bets
   resources :categories
   resources :users
