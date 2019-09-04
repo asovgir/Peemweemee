@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+.brand-logo {
+    display: inline-block;
+    height: 100%
+}
+
+.brand-logo>img {
+    padding-top: 7px;
+}
+
+/*//-- SHORTCUT CLASSES FOR RESPONSIVENESS--//*/
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+    .brand-logo>img {
+    	padding-top: 4px;
+	}
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Small Monitor */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+/* Large Monitor */
+
+@media only screen and (min-width: 1200px) {
+
+}

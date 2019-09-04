@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+
+    $('.tabs').tabs();
+
+    $('.modal').modal();
+  });
