@@ -37,7 +37,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_not user.save, "saved user without a title"
   end
 
-  test "should show user" do
+  test "should show user with no image" do
+    get user_url(@user2)
+    assert_response :success
+  end
+
+  test "should show user with image" do
     get user_url(@user)
     assert_response :success
   end

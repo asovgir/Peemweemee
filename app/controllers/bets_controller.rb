@@ -21,6 +21,8 @@ class BetsController < ApplicationController
 
   # GET /bets/1/edit
   def edit
+    @users = User.all
+    @categories = Category.all
   end
 
   # POST /bets
