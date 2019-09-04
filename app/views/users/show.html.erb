@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-	<td><%= image_tag @user.avatar %> </td>
+	<td><%= image_tag @user.avatar unless @user.avatar.blank? %> </td>
 </p>
 <p>
   <strong>Username:</strong>
