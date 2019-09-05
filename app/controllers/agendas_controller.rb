@@ -5,6 +5,7 @@ class AgendasController < ApplicationController
   # GET /agendas.json
   def index
     @agendas = Agenda.all
+    # @agenda = Agenda.find(params[:id])
   end
 
   # GET /agendas/1

@@ -54,18 +54,48 @@
                 <th>&nbsp;</th>
             </tr>
           </thead>
-
-  <tbody>
-    <% @agendas.each do |agenda| %>
-      <tr>
-        <td><%= agenda.is_complete %></td>
-        <td><%= agenda.topic %></td>
-        <td><%= link_to 'Show', agenda %></td>
-        <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
-        <td><%= link_to 'Destroy', agenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+          <tbody>
+            <% @agendas.each do |agenda| %>
+              <tr>
+                <td><i class="material-icons">check_box_outline_blank</i></td>
+                <td>appTask</td>
+                <td><%= agenda.topic %></td>
+                <!-- Modal Trigger -->
+                <td>
+                  <%= link_to agenda, :class => "waves-effect waves-light btn modal-trigger" do %>
+                    <i class="material-icons white-text">more_horiz</i>
+                  <% end %>
+                  <!-- Modal Structure -->
+                    <div id="details1" class="modal">
+                      <div class="modal-content">
+                        <h4>Agenda Item: Details</h4>
+                        <div class="chip">
+                          Incomplete
+                        </div>
+                        <div class="row">
+                          <form class="input-field col s12">
+                            <input id="item_title" type="text" class="validate">
+                            <label for="item_title">Agenda Item Title</label>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                      </div>
+                    </div>
+                <td>
+                  <%= link_to edit_agenda_path(agenda), :class => "waves-effect waves-light btn modal-trigger" do %>
+                    <i class="material-icons white-text">mode_edit</i>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to agenda, method: :delete, data: { confirm: 'Are you sure?' }, :class => "waves-effect waves-light btn modal-trigger" do %>
+                    <i class="material-icons white-text">delete_forever</i>
+                  <% end %>
+                </td>
+              </tr>
+          </tbody>
+        <% end %>
 </table>
 
 <br>
