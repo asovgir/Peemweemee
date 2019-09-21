@@ -58,7 +58,7 @@
             <% @agendas.each do |agenda| %>
               <tr>
                 <td><i class="material-icons">check_box_outline_blank</i></td>
-                <td>appTask</td>
+                <td><%= agenda.agendacategory %></td>
                 <td><%= agenda.topic %></td>
                 <!-- Modal Trigger -->
                 <td>

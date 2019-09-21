@@ -17,7 +17,7 @@ class AgendasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agenda" do
     assert_difference('Agenda.count') do
-      post agendas_url, params: { agenda: { is_complete: @agenda.is_complete, topic: @agenda.topic } }
+      post agendas_url, params: { agenda: { is_complete: @agenda.is_complete, topic: @agenda.topic, agendacategory_id: @agenda.agendacategory_id } }
     end
 
     assert_redirected_to agenda_url(Agenda.last)

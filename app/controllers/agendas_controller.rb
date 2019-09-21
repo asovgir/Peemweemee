@@ -16,10 +16,12 @@ class AgendasController < ApplicationController
   # GET /agendas/new
   def new
     @agenda = Agenda.new
+    @agendacategories = Agendacategory.all
   end
 
   # GET /agendas/1/edit
   def edit
+    @agendacategories = Agendacategory.all
   end
 
   # POST /agendas
@@ -70,6 +72,6 @@ class AgendasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agenda_params
-      params.require(:agenda).permit(:topic, :is_complete)
+      params.require(:agenda).permit(:topic, :is_complete, :agendacategory_id)
     end
 end

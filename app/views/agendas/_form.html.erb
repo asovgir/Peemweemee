@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :agendacategory_id %>
+    <%= form.collection_select :agendacategory_id, @agendacategories, :id, :category%>
+  </div>
+
+  <div class="field">
     <%= form.label :is_complete %>
     <%= form.check_box :is_complete, id: :agenda_is_complete %>
   </div>

@@ -2,8 +2,10 @@
 
 one:
   topic: MyString
+  agendacategory: one
   is_complete: false
 
 two:
   topic: MyString
+  agendacategory: two
   is_complete: false

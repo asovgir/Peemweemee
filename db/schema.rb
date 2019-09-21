@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190901035720) do
+ActiveRecord::Schema.define(version: 20190921032059) do
+
+  create_table "agendacategories", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "agendas", force: :cascade do |t|
     t.string "topic"
     t.boolean "is_complete"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "agendacategory_id"
+    t.index ["agendacategory_id"], name: "index_agendas_on_agendacategory_id"
   end
 
   create_table "bet_ideas", force: :cascade do |t|

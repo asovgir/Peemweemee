@@ -1,0 +1,2 @@
+class Agendacategory < ApplicationRecord
+end

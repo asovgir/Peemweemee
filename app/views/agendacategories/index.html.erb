@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agendacategories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agendacategories.each do |agendacategory| %>
+      <tr>
+        <td><%= agendacategory.category %></td>
+        <td><%= link_to 'Show', agendacategory %></td>
+        <td><%= link_to 'Edit', edit_agendacategory_path(agendacategory) %></td>
+        <td><%= link_to 'Destroy', agendacategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agendacategory', new_agendacategory_path %>
