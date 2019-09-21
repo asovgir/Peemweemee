@@ -1,0 +1,183 @@
+<%= render 'shared/nav' %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>PeemWeeMee | Home</title>
+
+  <!--Link to Favicon CURRENTLY MIA-->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <!-- CSS  -->
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet"/>
+
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Neucha|Permanent+Marker" rel="stylesheet">
+  <!-- Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body contenteditable="false">
+  <!--Page Header TABLET & COMPUTER ONLY-->
+  <header> 
+    <!--Banner imagery-->
+    <div class="navbar-fixed">
+      <nav class="red darken-4">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+              <%= image_tag "logo-chips.png", :class =>"responsive-img" %>
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="notifications.html"><i class="material-icons">notifications</i></a></li>
+              <li><a href="users.html"><i class="material-icons">account_circle</i></a></li>
+              <li><a href="settings.html"><i class="material-icons">settings</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="notifications.html">Notification Center</a></li>
+      <li><a href="users.html">Profile</a></li>
+      <li><a href="collapsible.html">Settings</a></li>
+    </ul>
+  </header>
+
+  <!--Menu Options Begin-->
+  <!--V1 Option 1-->
+  <div class="container section">
+    <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">
+            <i class="large material-icons">lightbulb_outline</i>
+          </div>
+          <div class="card-action center-align">
+            <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propose a Bet</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">
+            <i class="large material-icons">flight</i>
+          </div>
+          <div class="card-action center-align">
+            <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active Bet Log</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">
+            <i class="large material-icons">flash_on</i>
+          </div>
+          <div class="card-action center-align">
+            <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ongoing Bets / Special Events</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">
+              <%= image_tag "dice.png", :class =>"responsive-img" %>
+          </div>
+          <div class="card-action center-align">
+            <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools</a>
+          </div>
+        </div> 
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">            
+            <%= image_tag "chips.png", :class =>"responsive-img" %>                
+          </div>
+          <div class="card-action center-align">
+            <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Claim a Prize</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card black hoverable">
+          <div class="card-content white-text center-align">
+            <%= image_tag "gem.png", :class =>"responsive-img" %>
+          </div>
+          <div class="card-action center-align">
+            <a href="agenda.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agenda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--V1 Option 2-->
+  <div class="container section">
+    <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card horizontal">
+          <div class="card-image valign-wrapper">
+            <%= image_tag "dice.png", :class =>"responsive-img" %>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content valign-wrapper">
+              <p>Feelin' Lucky Pal?</p>
+            </div>
+            <div class="card-action">
+              <a href="#">PROPOSE A BET</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card horizontal">
+          <div class="card-image valign-wrapper">
+            <%= image_tag "chips.png", :class =>"responsive-img" %>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content valign-wrapper">
+              <p>Party like a rockstar!</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Claim a prize</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card horizontal">
+          <div class="card-image valign-wrapper">
+            <%= image_tag "gem.png", :class =>"responsive-img" %>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content valign-wrapper">
+              <p>Got something to say?</p>
+            </div>
+            <div class="card-action">
+              <a href="agenda.html">Agenda</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+
+
+  
+
+  <!-- Scripts-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
