@@ -58,14 +58,12 @@
             <% @agendas.each do |agenda| %>
               <tr>
                 <td>
-                  <form action="#">
-                    <p>
-                      <label>
-                        <input type="checkbox" />
-                        <span>&nbsp;</span>
-                      </label>
-                    </p>
-                  </form>
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </td>
                 <td><%= agenda.agendacategory %></td>
                 <td><%= agenda.topic %></td>
